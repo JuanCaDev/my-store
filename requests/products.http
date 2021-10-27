@@ -1,0 +1,39 @@
+@api = http://localhost:3000/api/v1
+@endpoint = /products
+
+### All
+GET {{api}}{{endpoint}}
+
+### One
+GET {{api}}{{endpoint}}/dc59e1b1-ddad-4420-89c0-cc7a0382x0526
+
+### Create
+POST {{api}}{{endpoint}}
+Content-Type: application/json
+
+{
+  "name": "New pro duct",
+  "price": 1209,
+  "image": "http://placeimg.com/640/480"
+}
+
+### Update
+PUT {{api}}{{endpoint}}/2
+Content-Type: application/json
+
+{
+  "name": "New product",
+  "price": 1209,
+  "image": "http://placeimg.com/640/480"
+}
+
+### Patch
+PATCH {{api}}{{endpoint}}/cd5b1eac-8133-43a3-a168-d7f17fd468a5
+Content-Type: application/json
+
+{
+  "name": "New product22"
+}
+
+### Delete
+DELETE {{api}}{{endpoint}}/2
